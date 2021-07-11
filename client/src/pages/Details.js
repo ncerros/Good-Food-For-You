@@ -5,41 +5,44 @@ import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
 function Details(props) {
-  const [book, setBook] = useState({})
+  const [product, setProduct] = useState({});
 
-  // When this component mounts, grab the book with the _id of props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
-  const {id} = useParams()
+  // When this component mounts, grab the product with the _id of props.match.params.id
+  // e.g. localhost:3000/product/1756356
+  const { id } = useParams()
   useEffect(() => {
-    API.getBook(id)
-      .then(res => setBook(res.data))
+    API.getProduct(id)
+      .then(res => setProduct(res.data))
       .catch(err => console.log(err));
-  }, [])
+  })
 
   return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          <Col size="s8">
             <Jumbotron>
-              <h1>
-                {book.title} by {book.author}
-              </h1>
-            </Jumbotron>
+              <h3>{product.title}</h3> 
+              <img src={product.image} alt={product.title} /> 
+              <p><strong>Price: </strong>{product.price}</p>
+              <p><strong>Decription: </strong>{product.description}</p>
+              <p><strong>Ingredient List: </strong>{product.ingredientList}</p> 
+            </Jumbotron> 
+            <p></p>
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Synopsis</h1>
+          <Col size="s10 offset-s1">
+            {/* <article>
+              <h1>Details</h1>
               <p>
-                {book.synopsis}
+                {foods.details}
               </p>
-            </article>
+            </article> */}
           </Col>
         </Row>
         <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+          <Col size="s2">
+            <Link to="/">← Back to Grocery List</Link>
           </Col>
         </Row>
       </Container>
