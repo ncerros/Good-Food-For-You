@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import 'materialize-css/dist/css/materialize.min.css'
-import M from 'materialize-css'
+
+// *** The two lines below are not needed.  Materialize is globally in the index.html ***///
+// import 'materialize-css/dist/css/materialize.min.css'
+// import M from 'materialize-css'
+
 
 /*eslint-disable */
 export default class Slider extends Component {
