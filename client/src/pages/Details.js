@@ -42,7 +42,7 @@ function Details(props) {
         </Row>*/}
         <Row>
           <Col size="s2">
-            <Link to="/">← Back to Grocery List</Link>
+            <Link to="/product">← Back to Grocery List</Link>
           </Col>
         </Row>
       </Container>
