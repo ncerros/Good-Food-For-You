@@ -30,19 +30,19 @@ function Details(props) {
             <p></p>
           </Col>
         </Row>
-        <Row>
+        {/*<Row>
           <Col size="s10 offset-s1">
-            {/* <article>
+             <article>
               <h1>Details</h1>
               <p>
                 {foods.details}
               </p>
-            </article> */}
+            </article> 
           </Col>
-        </Row>
+        </Row>*/}
         <Row>
           <Col size="s2">
-            <Link to="/">← Back to Grocery List</Link>
+            <Link to="/product">← Back to Grocery List</Link>
           </Col>
         </Row>
       </Container>
