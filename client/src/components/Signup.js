@@ -30,6 +30,7 @@ function SignUp() {
                           <input type="text"></input>
                           <label className="active" for="password">Password</label>
                           <button className="btn #81c784 green lighten-2 z-depth-5">SignUp</button>
+                      
                       </div>
                       
                 
