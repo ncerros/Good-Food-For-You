@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+//import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
 function Details(props) {
@@ -20,13 +20,13 @@ function Details(props) {
       <Container fluid>
         <Row>
           <Col size="s8">
-            <Jumbotron>
-              <h3>{product.title}</h3> 
+            <div>
+              <h4>{product.title}</h4> 
               <img src={product.image} alt={product.title} /> 
               <p><strong>Price: </strong>{product.price}</p>
               <p><strong>Decription: </strong>{product.description}</p>
               <p><strong>Ingredient List: </strong>{product.ingredientList}</p> 
-            </Jumbotron> 
+            </div> 
             <p></p>
           </Col>
         </Row>

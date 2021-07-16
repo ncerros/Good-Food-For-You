@@ -22,7 +22,7 @@ const Register = (props) => {
     try {
       setData({ ...data, error: null });
       await axios.post(
-        "/auth/register",
+        "/api/auth/register",
         { fname, lname, email, zipcode, password },
         {
           headers: {
@@ -110,6 +110,7 @@ const Register = (props) => {
                       Register
                     </button>
                   </div>
+                  {/* {password ? <p>Your Account is Ready.</p> : <p>You F'd dup</p>} */}
                   <br/><br/>
               </form>
           </div>
