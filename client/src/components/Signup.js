@@ -29,8 +29,10 @@ function SignUp() {
                       <div className="input-field col s12">
                           <input type="text"></input>
                           <label className="active" for="password">Password</label>
+                          <button className="btn #81c784 green lighten-2 z-depth-5">SignUp</button>
+                      
                       </div>
-                      <button className="btn #81c784 green lighten-2 z-depth-5">SignUp</button>
+                      
                 
                   </div>
 
