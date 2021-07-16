@@ -18,21 +18,23 @@ const Home = (props) => {
     getUser();
   }, []);
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    props.history.push("/login");
-  };
+  // const logout = () => {
+  //   localStorage.removeItem("token");
+  //   props.history.push("/login");
+  // };
 
   if (!localStorage.getItem("token")) {
-    props.history.push("/login");
+    props.history.push("/home");
+   
   }
+  
   return (
-    <div className="m-5">
+    <div className="">
       <div className="jumbotron">
-        <p className="center-align h2">Welcome {user && user.fname}</p>
-        <button className="btn btn-danger" onClick={logout}>
-          Logout
-        </button>
+        <p className="center-align">Welcome {user && user.fname}</p>
+        {/* <button className="aves-effect waves-light btn" onClick={logout}>
+         
+        </button> */}
       </div>
       <Slider />
     </div>

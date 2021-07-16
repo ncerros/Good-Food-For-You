@@ -63,9 +63,9 @@ router
   }
 });
  
-// *** Make a protected route must be loggen to access route 8th *** /
+// *** Make a protected route must be logged in to access route 8th *** /
 router
-  .get("/", authLogin, async (req,) => {
+  .get("/", authLogin, async (req, res) => {
     console.log(req.user);
     try{
       const user = await User.findById(req.user._id).select("-password -__v");

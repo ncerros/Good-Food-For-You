@@ -78,7 +78,7 @@ const Login = (props) => {
         </div>
       </div>
       <div className="col s2" />
-      <Slider />
+      {/* <Slider /> */}
       </div>
     
     
