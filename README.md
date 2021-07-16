@@ -44,13 +44,15 @@
 
 ***
   ## Technologies
-    - Node.js
-    - Express.js
-    - MongoDB
-    - React
-    - Dotenv
-    - Bcryptjs
-    - Materialize
+  - Node.js
+  - Express.js
+  - MongoDB
+  - Mongoose
+  - React
+  - Dotenv
+  - Cors
+  - Bcryptjs
+  - Materialize
 
   ## Usage:
   This application utilizes several web and database technologies... Update Later...  
@@ -71,10 +73,11 @@
   To contribute to this project, please send an email.  
   <br>
   The contributors for this project are:
-    - Bruce Mowrey
-    - Norman Cerros
-    - Leighton Jenkins
-    - D. Javan Worthy
+  - Norman Cerros
+  - D. Javan Worthy
+  - Bruce Mowrey
+  - Leighton Jenkins
+ 
 
 ***
   ## Tests:
