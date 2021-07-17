@@ -1,10 +1,8 @@
 const router = require("express").Router();
 const productController = require("../../controllers/productController");
-const axios = require ("axios");
+const proxyController = require("../../controllers/proxyController");
 
-const spoonApiKey = process.env.API_KEY_SPOON;
-
-const spoonProductUrl = `https://api.spoonacular.com/food/products/search?apiKey=${spoonApiKey}&query=`;
+// const spoonProductUrl = `https://api.spoonacular.com/food/products/search?apiKey=${spoonApiKey}&query=`;
 
 // Matches with "/api/product"
 router
@@ -423,8 +421,7 @@ router
       "processingTimeMs": 79,
       "expires": 1626204868430
     }
-    )
-    
-  })
+    )})
+  
 
 module.exports = router;
