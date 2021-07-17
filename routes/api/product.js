@@ -24,7 +24,7 @@ router
 router
   .route("/pull/:dataPull")
   .get( async (req, res) => {
-    const dataPull = req.params.dataPull;
+    // const dataPull = req.params.dataPull;
     // const pullResult = await axios.get(spoonProductUrl + dataPull);
     // console.log(pullResult)
     // res.json(pullResult.data)
@@ -34,7 +34,7 @@ router
       "products": [
         {
           "id": 192386,
-          "title": "Pizza Buddy: Frozen Pizza Dough, 16 Oz",
+          "title": "Ham Pizza: Frozen Pizza Dough, 16 Oz",
           "price": "$8.52",
           "likes": 1,
           "badges": [
