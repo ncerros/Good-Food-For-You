@@ -5,6 +5,7 @@ import Details from "./pages/Details";
 import Home from "./pages/Home";
 //import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import SignUp from "./pages/SignUp";
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
           <Route exact path="/product">
             <Product />
           </Route>
-        <Route exact path="/product/:id">
-          <Details />
+        <Route exact path="/signup">
+          <SignUp />
         </Route>
            {/* <Route>
             <NoMatch />

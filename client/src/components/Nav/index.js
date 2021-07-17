@@ -12,7 +12,7 @@ class Nav extends Component {
                   <li><a href="/" className="waves-effect waves-light btn #66bb6a green lighten-1">HOME</a></li>
                   <li><a href="/product" className="waves-effect waves-light btn #66bb6a green lighten-1">PRODUCT SEARCH</a></li>
                   <li><a href="#" className="waves-effect waves-light btn #66bb6a green lighten-1">LOGIN</a></li>
-                  <li><a href="#" className="waves-effect waves-light btn #66bb6a green lighten-1">SIGNUP</a></li>
+                  <li><a href="/signup" className="waves-effect waves-light btn #66bb6a green lighten-1">SIGNUP</a></li>
                 </ul>
               </div>
             </nav>
