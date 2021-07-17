@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
 import "./slider.css";
-// *** The two lines below are not needed.  Materialize is globally in the index.html ***///
+import M from "materialize-css";
+
+// *** The one line below are not needed.  Materialize is globally in the index.html ***///
 //import 'materialize-css/dist/css/materialize.min.css'
-import M from 'materialize-css';
+
 
 const options = {
     indicators: true,
