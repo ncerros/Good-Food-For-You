@@ -24,7 +24,7 @@ export default {
 
   // api product data pull from spoonacular
   spoonPull: function(pull) {
-    return axios.get("/proxy/" + pull + "&addProductInformation=true&number=1");
+    return axios.get("/proxy/" + pull);
   }
 
 };
