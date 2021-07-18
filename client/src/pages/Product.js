@@ -71,6 +71,7 @@ function Product() {
   };
   const saveProducts = (products) => {
     console.log(products)
+    console.log(products.data.products)
     products.data.products.forEach(async (product) => {
         await API.saveProduct ({
           ...product
