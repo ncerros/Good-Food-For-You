@@ -10,6 +10,7 @@ export default {
 
   getProduct: function(id) {
     return axios.get("/api/product/" + id);
+    // return axios.get("/api/product/" + id);
   },
 
   deleteProduct: function(id) {
@@ -23,7 +24,7 @@ export default {
 
   // api product data pull from spoonacular
   spoonPull: function(pull) {
-    return axios.get("/api/product/pull/" + pull + "&addProductInformation=true&number=1");
+    return axios.get("/proxy/productData/" + pull);
   }
 
 };
