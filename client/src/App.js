@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Product from "./pages/Product";
 import Details from "./pages/Details";
@@ -8,6 +9,8 @@ import Nav from "./components/Nav";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Home from "./pages/Home";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -29,6 +32,7 @@ function App() {
             <Details />
           </Route>
 
+          <Route exact path="/about" component={About}/>
           <Route exact path="/register" component={Register}/>
           
           <Route exact path="/login" component={Login}/>
@@ -48,6 +52,7 @@ function App() {
             <NoMatch />
           </Route> */}
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

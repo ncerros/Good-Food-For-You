@@ -15,6 +15,7 @@ function Nav () {
             <ul id="nav-mobile" className="right">
               {!localStorage.getItem("token") ? 
                 <>
+                  <li><a href="/About" className="waves-effect waves-light btn #66bb6a green lighten-1">ABOUT US</a></li>
                   <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1">LOGIN</a></li>
                   <li><a href="/register" className="waves-effect waves-light btn #66bb6a green lighten-1">REGISTER</a></li> 
                 </> 
