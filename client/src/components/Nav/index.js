@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Nav () {
 
   const logout = (props) => {
@@ -23,8 +24,10 @@ function Nav () {
                   <li><a href="/" className="waves-effect waves-light btn #66bb6a green lighten-1">HOME</a></li>
                   <li><a href="/product" className="waves-effect waves-light btn #66bb6a green lighten-1">PRODUCT SEARCH</a></li>
                   <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1" onClick={logout}>LOG OUT</a></li>
+                
                 </>
               }
+              
              
             </ul>
           </div>

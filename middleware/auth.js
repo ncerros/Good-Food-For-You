@@ -11,10 +11,10 @@ require ("dotenv").config();
           req.user = decode;
           next();
       } else {
-        return res.status(401).json({message: "You Do Not Have Authorization!"});
+        return res.status(401).json({message: "Your token is not valid!"});
       }
       
     } catch(error) {
-        console.log("You Do Not Have Authorization!")
+        console.log("Your token is not valid!")
     }
   };

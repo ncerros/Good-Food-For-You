@@ -31,6 +31,7 @@ const Register = (props) => {
         }
       );
       props.history.push("/login");
+      
     } catch (err) {
       setData({ ...data, error: err.response.data.error });
     }
