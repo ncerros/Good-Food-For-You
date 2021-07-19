@@ -4,6 +4,7 @@ const User = require("../../models/user");
 const jsonWT = require("jsonwebtoken");
 const { authLogin } = require("../../middleware/auth");
 require('dotenv').config();
+const verify = require("../../verifyToken");
 
 // register user 4th
 router
@@ -23,7 +24,7 @@ router
         password: hashPwd,
       })
       await user.save();
-      return res.status(201).json({ message: `${fname} ${lname}, your account has been successfully created.` });
+      return res.status(201).json({ message: `Your account has been successfully created.` });
     } catch (error) {
       console.log(error)
       return res.status(400).json({ error: error.message });
@@ -48,7 +49,7 @@ router
 
       // add SECRET variable to your .env
       const token = jsonWT.sign({ _id: user._id }, process.env.SECRET, {
-        expiresIn: "1h",
+        expiresIn: "1800000",
       });
       return res.json({
         token,
@@ -79,4 +80,57 @@ router
     }
   });
 
+  //Update User with jsWT
+  router.put("/:id", verify, async (req, res) => {
+    if (req.user.id === req.params.id || req.user.isAdmin) {
+      if (req.body.password) {console.log (req.body.password)
+        req.body.password = await bcrypt.hash(password, 12);
+      }
+  
+      try {
+        const updatedUser = await User.findByIdAndUpdate(
+          req.params.id,
+          {
+            $set: req.body,
+          },
+          { new: true }
+        );
+        res.status(200).json(updatedUser);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    } else {
+      res.status(403).json("You are not authorized to update this account");
+    }
+  });
+
+
 module.exports = router;
+
+ // update user without jsonWT
+// router
+//   .put("/:id", async (req, res) => {
+//     if (req.body.user._id === req.params.id) {
+//       if (req.body.password) {
+//         console.log(req.user)
+//         const salt = await bcrypt.genSalt(12);
+//         req.body.password = await bcrypt.hash(req.body.password, salt);
+//       }
+//       try {
+//         const updatedUser = await user.findByIdAndUpdate(req.params.id,
+//           {
+//             $set: req.body,
+//           },
+//           { new: true }
+//         );
+//         res.status(200).json(updatedUser);
+//       } catch (err) {
+//         res.status(500).json(err);
+//       }
+//     } else {
+//       res.status(401).json("This is not your account to update");
+//     }
+//   });
+  
+ 
+
