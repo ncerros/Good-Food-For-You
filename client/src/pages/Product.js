@@ -84,12 +84,13 @@ function Product() {
 
   return (
    
-      <Container fluid>
+      <Container fluid >
         <Row>
           <Col size="s12 m5">
             <Jumbotron>
-              <h4>Enter Grocery List Product</h4> 
+              <h4 className="z-depth-5">Enter Grocery List Product</h4> 
             </Jumbotron>
+            <br></br>
             <form>
               <Input
                 onChange={handleInputChange}
@@ -114,8 +115,9 @@ function Product() {
         
           <Col size="s12 m7">
                <Jumbotron>
-                <h4>Grocery List Items</h4>
+                <h4 className="z-depth-5">Grocery List Items</h4>
               </Jumbotron>
+              <br></br>
                 {products.length ? (
                 <List>
                   {products.map(product => (
@@ -130,7 +132,7 @@ function Product() {
                   ))}
                 </List>
               ) : (
-                <h4>No Results to Display</h4>
+                <h4 className="z-depth-5">No Results to Display</h4>
               )}
               
           </Col>
