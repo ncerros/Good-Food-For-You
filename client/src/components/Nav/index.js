@@ -9,9 +9,9 @@ function Nav () {
   };
 
     return (
-      <div>
+      <div className="#a5d6a7 green lighten-3">
         <nav>
-          <div className="nav-wrapper #81c784 green lighten-2">
+          <div className="nav-wrapper #1b5e20 green darken-4">
             <a href="/" className="brand-logo left">Good Foods</a>
             <ul id="nav-mobile" className="right">
               {!localStorage.getItem("token") ? 
@@ -36,6 +36,7 @@ function Nav () {
       </div>
     )
 }
+
 
 export default Nav;
 
