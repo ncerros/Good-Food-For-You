@@ -62,7 +62,7 @@ const Grocery = () => {
         <>
             <h1>The Real Grocery List</h1>
             <Link to="foods">
-               <a class="waves-effect waves-light btn">Make List</a>
+               <a class="waves-effect waves-light btn #2e7d32 green darken-3">Make List</a>
             </Link>
             <form>
                 <div class="input-field col s6">
@@ -79,7 +79,7 @@ const Grocery = () => {
                    foodList.map(foodLists => (
                    <div class="row basic-card">
                     <div class="col s12 m6">
-                    <div class="card blue-grey darken-1">
+                    <div class="#a5d6a7 green lighten-3">
                         <div class="card-content white-text" style={{display: "flex", margin: 1}}>
                         <span class="card-title" style={{
                             color: "black",
@@ -92,8 +92,8 @@ const Grocery = () => {
                         
                        <p style={{margin: 10}}></p>
                          <div> 
-                            <a href={`/foods/${foodList._id}`} class="waves-effect waves-light btn" style={{margin: 5, marginLeft: 400}}>Edit</a>
-                            <a class="waves-effect waves-light btn #b71c1c red darken-4" onClick={() => deleteGrocery(foodList._id)}>Delete</a>
+                            <a href={`/foods/${foodList._id}`} class="waves-effect waves-light btn #2e7d32 green darken-3" style={{margin: 5, marginLeft: 400}}>Edit</a>
+                            <a class="waves-effect waves-light btn #2e7d32 green darken-3" onClick={() => deleteGrocery(foodList._id)}>Delete</a>
                           
                         </div>
                         </div>

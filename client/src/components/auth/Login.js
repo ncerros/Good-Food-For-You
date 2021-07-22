@@ -42,7 +42,7 @@ const Login = (props) => {
     <div className="row">
     <br/>
       <div className="col s3 " />
-      <div className="col s6 hoverable #212121 grey lighten-1">
+      <div className="col s6 hoverable #66bb6a green lighten-1">
         <h4 className="center-align m5 ">Account Login</h4>
         <div className="card p-5 shadow">
 
@@ -69,7 +69,7 @@ const Login = (props) => {
             </div>
             {error ? <p className="text-danger">{error}</p> : null}
             <div className="text-center">
-              <button className="btn #81c784 green lighten-2 z-depth-5" onClick={handleSubmit}>
+              <button className="btn #66bb6a green lighten-1" onClick={handleSubmit}>
 
                 Login
               </button>
