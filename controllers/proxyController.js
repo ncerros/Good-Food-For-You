@@ -9,10 +9,16 @@ module.exports = {
     return res.json(response);
   },
 
+  getGrocery: async (req, res) => {
+    const groceryPull = req.params.groceryData;
+    const thaResult = await axios.get(`https://api.spoonacular.com/food/ingredients/search?apiKey=${process.env.API_KEY}&query=${groceryPull}&addProductInformation=true&number=1`);
+    res.json(thaResult.data)
+  },
+
   getIngredient: async (req, res) => {
-    //add API_KEY variable to your .env file
+   //add API_KEY variable to your .env file
     const dataPull = req.params.productData;
-    // const pullResult = await axios.get(`https://api.spoonacular.com/food/products/search?apiKey=${process.env.API_KEY}&query=${dataPull}&addProductInformation=true&number=1`);
+    //const pullResult = await axios.get(`https://api.spoonacular.com/food/products/search?apiKey=${process.env.API_KEY}&query=${dataPull}&addProductInformation=true&number=1`);
     //res.json(pullResult.data)
     //above commented out to allow fake hardcoded data below to save hits on API
     res.json(
@@ -21,7 +27,7 @@ module.exports = {
       "products": [
         {
           "id": 192386,
-          "title": "Ham & Pineapple Pizza: Frozen Pizza Dough, 16 Oz",
+          "title": "Honey Baked Pizza: Frozen Pizza Dough, 16 Oz",
           "price": "$8.52",
           "likes": 1,
           "badges": [

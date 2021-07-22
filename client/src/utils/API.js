@@ -25,7 +25,40 @@ export default {
   // api product data pull from spoonacular
   spoonPull: function(pull) {
     return axios.get("/proxy/productData/" + pull);
+  },
+
+  //  Looking for user status
+  getCurrentUser: function() {
+    return axios.get("/api/auth")
+  },
+  // user status 
+
+
+  // api ingredient data pull from spoonacular
+  getGroceries: function() {
+    return axios.get("/api/ingredient");
+  },
+
+  getGrocery: function(id) {
+    return axios.get("/api/ingredient/" + id);
+    // return axios.get("/api/product/" + id);
+  },
+
+  deleteGrocery: function(id) {
+    return axios.delete("/api/ingredient/" + id);
+  },
+
+  // save a food to the database
+  saveGrocery: function(groceryData) {
+    return axios.post("/api/ingredient", groceryData)
+  },
+
+  // api product data pull from spoonacular
+  spoonPulling: function(pull) {
+    return axios.get("/proxy/groceryData/" + pull);
   }
+
+
 
 };
 

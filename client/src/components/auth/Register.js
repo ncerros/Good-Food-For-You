@@ -31,7 +31,8 @@ const Register = (props) => {
         }
       );
       props.history.push("/login");
-      
+      window.location.href="/";
+     
     } catch (err) {
       setData({ ...data, error: err.response.data.error });
     }
@@ -111,7 +112,7 @@ const Register = (props) => {
                       Register
                     </button>
                   </div>
-                 <br/><br/>
+                  <br/><br/>
               </form>
           </div>
       </div>
