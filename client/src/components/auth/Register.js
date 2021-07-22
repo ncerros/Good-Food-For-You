@@ -41,14 +41,14 @@ const Register = (props) => {
   return (
 
       <div className="container">
-          <h1 id="heading" className="center-align #81c784 green lighten-2 white-text">Account Registration</h1>
+          <h1 id="heading" className="center-align #388e3c green darken-2 white-text">Account Registration</h1>
           <div className="row">
-              <form className="col s12 #212121 grey darken-1">
+              <form className="col s12 #388e3c green darken-2">
                   <br></br>
                   <div className="row">
 
                     <div className="input-field col s6">
-                        <label className="active" htmlFor="firstname">First Name</label>
+                        <label className="active white-text" htmlFor="firstname">First Name</label>
                         <input 
                           placeholder="Enter First Name" 
                           type="text"
@@ -60,7 +60,7 @@ const Register = (props) => {
                     </div>
 
                     <div className="input-field col s6">
-                    <label className="active" htmlFor="firstname">Last Name</label>
+                    <label className="active white-text" htmlFor="firstname">Last Name</label>
                         <input 
                           placeholder="Enter Last Name" 
                           type="text"
@@ -72,7 +72,8 @@ const Register = (props) => {
                     </div>
 
                     <div className="input-field col s12">
-                    <label className="active" htmlFor="email">Email</label>
+                    <label className="active white-text" htmlFor="email">Email</label>
+                    <br></br>
                         <input 
                           placeholder="Enter Email" 
                           type="text"
@@ -83,7 +84,7 @@ const Register = (props) => {
                     </div>
 
                     <div className="input-field col s12">
-                        <label className="active" htmlFor="zipcode">Zip Code</label>
+                        <label className="active white-text" htmlFor="zipcode">Zip Code</label>
                         <input 
                           placeholder="Enter Zip Code" 
                           type="text"
@@ -94,7 +95,8 @@ const Register = (props) => {
                     </div>
 
                     <div className="input-field col s12">
-                        <label className="active" htmlFor="password">Password</label>
+                        <label className="active white-text" htmlFor="password">Password</label>
+                        <br></br>
                         <input 
                           placeholder="Enter Password" 
                           type="password"
