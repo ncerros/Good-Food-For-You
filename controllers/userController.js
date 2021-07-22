@@ -1,7 +1,7 @@
 // const db = require("../models");
 // const bcrypt = require("bcryptjs");
 
-// // userController
+// userController
 // module.exports = {
 //   findAll: function(req, res) {
 //     db.User
@@ -30,7 +30,7 @@
 //   },
 
 
-// // update user
+// update user
 // router.put("/:id", async (req, res) => {
 //     if (req.body.userId === req.params.id) {
 //       if (req.body.password) {
@@ -54,7 +54,7 @@
 //     }
 //   });
   
-//   module.exports = router;
+  //module.exports = router;
 
 
 
@@ -66,10 +66,10 @@
 //       .then(dbModel => res.json(dbModel))
 //       .catch(err => res.status(422).json(err));
 //   }
-// };
+//};
 
 
-// const router = require("express").Router();
+//const router = require("express").Router();
 
 
 

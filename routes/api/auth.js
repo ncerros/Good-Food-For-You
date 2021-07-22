@@ -73,6 +73,7 @@ router
     console.log(req.user);
     try {
       const user = await User.findById(req.user._id).select("-password -__v");
+      console.log("Status of current logged on user: ", user)
       res.json(user);
     } catch (error) {
       console.log(error)

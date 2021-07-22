@@ -11,6 +11,7 @@ import Login from "./components/auth/Login";
 import Home from "./pages/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Grocery from "./pages/Grocery";
 
 
 function App() {
@@ -19,12 +20,14 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/slider">
-            <Slider />
-         </Route>
+          
            {/* <Route exact path={["/", "/product"]}>
             <Product /> 
           </Route>*/}
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/slider">
+            <Slider />
+          </Route>
           <Route exact path="/product">
             <Product />
           </Route>
@@ -41,8 +44,8 @@ function App() {
             <Login />
           </Route> */}
 
-           
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/grocery" component={Grocery}/>
+          
           {/* <Route exact path={["/", "home"]}>
             <Home />
           </Route>

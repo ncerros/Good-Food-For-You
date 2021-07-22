@@ -30,7 +30,8 @@ const Login = (props) => {
         }
       );
       localStorage.setItem("token", res.data.token);
-      props.history.push("/");
+      // props.history.push("/");
+      window.location.href="/"
     } catch (err) {
       setData({ ...data, error: err.response.data.error });
     }
@@ -78,7 +79,7 @@ const Login = (props) => {
         </div>
       </div>
       <div className="col s2" />
-      {/* <Slider /> */}
+      <Slider />
       </div>
     
     

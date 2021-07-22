@@ -18,6 +18,9 @@ router
   .put(productController.update)
   .delete(productController.remove);
 
+
+
+
 // API Route to Spoonacular
 
 // router

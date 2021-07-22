@@ -24,7 +24,8 @@ const Home = (props) => {
   // };
 
   if (!localStorage.getItem("token")) {
-    props.history.push("/home");
+    // props.history.push("/home");
+    window.location.href="/login";
    
   }
   

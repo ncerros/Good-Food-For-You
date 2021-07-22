@@ -8,5 +8,10 @@ router
 router
   .route("/productData/:productData")
   .get(proxyController.getIngredient);
+  //This is the route for the products
+
+router
+  .route("/groceryData/:groceryData")
+  .get(proxyController.getGrocery)
 
 module.exports = router;
