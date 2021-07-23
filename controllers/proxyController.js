@@ -9,11 +9,7 @@ module.exports = {
     return res.json(response);
   },
 
-  getGrocery: async (req, res) => {
-    const groceryPull = req.params.groceryData;
-    const thaResult = await axios.get(`https://api.spoonacular.com/food/ingredients/search?apiKey=${process.env.API_KEY}&query=${groceryPull}&addProductInformation=true&number=1`);
-    res.json(thaResult.data)
-  },
+  
 
   getIngredient: async (req, res) => {
    //add API_KEY variable to your .env file

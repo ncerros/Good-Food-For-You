@@ -34,28 +34,28 @@ export default {
   // user status 
 
 
-  // api ingredient data pull from spoonacular
+  // api grocery data pull from spoonacular
   getGroceries: function() {
-    return axios.get("/api/ingredient");
+    return axios.get("/api/grocery");
   },
 
   getGrocery: function(id) {
-    return axios.get("/api/ingredient/" + id);
+    return axios.get("/api/grocery/" + id);
     // return axios.get("/api/product/" + id);
   },
 
   deleteGrocery: function(id) {
-    return axios.delete("/api/ingredient/" + id);
+    return axios.delete("/api/grocery/" + id);
   },
 
   // save a food to the database
   saveGrocery: function(groceryData) {
-    return axios.post("/api/ingredient", groceryData)
+    return axios.post("/api/grocery", groceryData)
   },
 
   // api product data pull from spoonacular
-  spoonPulling: function(pull) {
-    return axios.get("/proxy/groceryData/" + pull);
+  spoonGrocery: function(searchTerm) {
+    return axios.get("/api/grocery/" + searchTerm);
   }
 
 

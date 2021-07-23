@@ -88,7 +88,7 @@ function Product() {
         <Row>
           <Col size="s12 m5">
             <Jumbotron>
-              <h4 className="z-depth-5">Enter Grocery List Product</h4> 
+              <h4 className="z-depth-5">Enter Food Product</h4> 
             </Jumbotron>
             <br></br>
             <form>
@@ -115,7 +115,7 @@ function Product() {
         
           <Col size="s12 m7">
                <Jumbotron>
-                <h4 className="z-depth-5">Grocery List Items</h4>
+                <h4 className="z-depth-5">Product List Items</h4>
               </Jumbotron>
               <br></br>
                 {products.length ? (

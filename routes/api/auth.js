@@ -4,7 +4,7 @@ const User = require("../../models/user");
 const jsonWT = require("jsonwebtoken");
 const { authLogin } = require("../../middleware/auth");
 require('dotenv').config();
-const verify = require("../../verifyToken");
+//const verify = require("../../verifyToken");
 
 // register user 4th
 router
@@ -82,7 +82,7 @@ router
   });
 
   //Update User with jsWT
-  router.put("/:id", verify, async (req, res) => {
+  router.put("/:id", authLogin, async (req, res) => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
       if (req.body.password) {console.log (req.body.password)
         req.body.password = await bcrypt.hash(password, 12);
