@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const productRoutes = require("./product");
 const authRoutes = require("./auth");
-const ingredientRoutes = require("./ingredient");
+const groceryRoutes = require("./grocery");
 
 //const userRoutes = require("./user");
 
@@ -14,7 +14,7 @@ router.use("/auth", authRoutes);
 //User routes
 //router.use("/user", userRoutes);
 
-// Ingredient routes
-router.use("/ingredient", ingredientRoutes);
+// grocery routes
+router.use("/grocery", groceryRoutes);
 
 module.exports = router;
