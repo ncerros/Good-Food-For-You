@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const productRoutes = require("./product");
-const authRoutes = require("./auth");
+const userRoutes = require("./user");
 const groceryRoutes = require("./grocery");
 
 //const userRoutes = require("./user");
@@ -8,8 +8,8 @@ const groceryRoutes = require("./grocery");
 // Product routes
 router.use("/product", productRoutes);
 
-// Authorization routes
-router.use("/auth", authRoutes);
+// User Authorization routes
+router.use("/user", userRoutes);
 
 //User routes
 //router.use("/user", userRoutes);

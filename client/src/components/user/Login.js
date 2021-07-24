@@ -21,7 +21,7 @@ const Login = (props) => {
     try {
       setData({ ...data, error: null });
       const res = await axios.post(
-        "/api/auth/login",
+        "/api/user/login",
         { email, password },
         {
           headers: {

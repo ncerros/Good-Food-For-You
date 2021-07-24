@@ -29,7 +29,7 @@ export default {
 
   //  Looking for user status
   getCurrentUser: function() {
-    return axios.get("/api/auth")
+    return axios.get("/api/user")
   },
   // user status 
 
