@@ -22,7 +22,7 @@ export function FormBtn(props) {
   return (
     <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn waves-effect waves-light" type="submit" name="action">
       {props.children}
-      <i className="material-icons right">send</i>
+      <span className="vertical-center"><i className="material-icons right">send</i></span>
     </button>
   );
 }
