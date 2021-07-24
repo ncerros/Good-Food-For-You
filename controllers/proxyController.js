@@ -23,8 +23,8 @@ module.exports = {
       "products": [
         {
           "id": 192386,
-          "title": "Honey Baked Pizza: Frozen Pizza Dough, 16 Oz",
-          "price": "$8.52",
+          "title": "Country Baked Smithfield Ham: Frozen Ham, 16 Oz",
+          "price": "$9.52",
           "likes": 1,
           "badges": [
             "egg_free",

@@ -55,18 +55,13 @@ function Grocery () {
     return (
         <>
             <h1>Grocery List</h1>
-            
-            <form>
-                <a className="waves-effect waves-light btn #2e7d32 green darken-3">View List</a>
-                 <div className="input-field col s6" >
+             <form>
+                <div className="input-field col s6" >
                     <input onChange={handleInputChange} name="name" placeholder="Enter Grocery Item" id="first_name" type="text" className="validate" />
                     <label htmlFor="name"></label>
                     <button onClick={handleFormSubmit}>Grocery Search</button>
                 </div>  
-                {/* <FormBtn
-                    disabled={!(groceryObject.title)}
-                > Enter Grocery
-                </FormBtn> */}
+                
             </form>
             { groceryList.length > 0 ?
                 groceryList.map(foodLists => (
@@ -80,11 +75,10 @@ function Grocery () {
                     })}
                     
                 />
+
                 ))
                 :"No search found"
             }
-
-
         </>
     )
 };

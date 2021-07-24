@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Grocery from "./pages/Grocery";
+import SavedGrocery from "./pages/SavedGrocery";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           </Route> */}
 
           <Route exact path="/grocery" component={Grocery}/>
+          <Route exact path="/savedgrocery" component={SavedGrocery}/>
           
           {/* <Route exact path={["/", "home"]}>
             <Home />
