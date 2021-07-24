@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "./Slider"
 
 const About = () => (
-  <div>
+  <div className="container">
     <h4 className="green-text center-align">About Us</h4>
     <p className="flow-text green-text text center-align about">
         On this website, you will find everything related to 
