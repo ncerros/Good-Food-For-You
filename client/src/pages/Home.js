@@ -33,9 +33,6 @@ const Home = (props) => {
     <div className="#a5d6a7 green lighten-3">
       <div className="jumbotron">
         <p className="center-align white-text">Welcome {user && user.fname}</p>
-        {/* <button className="aves-effect waves-light btn" onClick={logout}>
-         
-        </button> */}
       </div>
       <Slider />
     </div>
