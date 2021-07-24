@@ -43,14 +43,14 @@ const Login = (props) => {
     <br/>
       <div className="col s3 " />
       <div className="col s6 hoverable #66bb6a green lighten-1">
-        <h4 className="center-align m5 ">Account Login</h4>
+        <h4 className="center-align m5 white-text">Account Login</h4>
         <div className="card p-5 shadow">
 
           <form>
             <div className="input-field col s6">
               <label htmlFor="email">Email</label>
               <input
-                className="form-control "
+                className="form-control green-text"
                 type="email"
                 name="email"
                 value={email}
@@ -60,7 +60,7 @@ const Login = (props) => {
             <div className="input-field col s6">
               <label htmlFor="password">Password</label>
               <input
-                className="form-control"
+                className="form-#388e3c green-text"
                 type="password"
                 name="password"
                 value={password}

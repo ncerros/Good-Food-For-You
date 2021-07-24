@@ -18,8 +18,8 @@ function Nav () {
 
     return (
       <div className="#a5d6a7 green lighten-3">
-        <nav>
-          <div className="nav-wrapper #1b5e20 green darken-4">
+        <nav className="#1b5e20 green darken-4">
+          <div className="nav-wrapper #1b5e20 green darken-4 container">
             <a href="/" className="brand-logo left">Good Foods</a>
             <ul id="nav-mobile" className="right">
               {!localStorage.getItem("token") ? 
