@@ -48,8 +48,8 @@ const Register = (props) => {
                   <div className="row">
 
                     <div className="input-field col s6">
-                        <label className="active white-text" htmlFor="firstname">First Name</label>
-                        <input 
+                        <label className="active" htmlFor="firstname">First Name</label>
+                        <input className="white-text"
                           placeholder="Enter First Name" 
                           type="text"
                           name="fname"
@@ -61,7 +61,7 @@ const Register = (props) => {
 
                     <div className="input-field col s6">
                     <label className="active white-text" htmlFor="firstname">Last Name</label>
-                        <input 
+                        <input className="white-text"
                           placeholder="Enter Last Name" 
                           type="text"
                           name="lname"
@@ -74,7 +74,7 @@ const Register = (props) => {
                     <div className="input-field col s12">
                     <label className="active white-text" htmlFor="email">Email</label>
                     <br></br>
-                        <input 
+                        <input className="white-text"
                           placeholder="Enter Email" 
                           type="text"
                           name="email"
@@ -85,7 +85,7 @@ const Register = (props) => {
 
                     <div className="input-field col s12">
                         <label className="active white-text" htmlFor="zipcode">Zip Code</label>
-                        <input 
+                        <input className="white-text"
                           placeholder="Enter Zip Code" 
                           type="text"
                           name="zipcode"
@@ -97,7 +97,7 @@ const Register = (props) => {
                     <div className="input-field col s12">
                         <label className="active white-text" htmlFor="password">Password</label>
                         <br></br>
-                        <input 
+                        <input className="white-text"
                           placeholder="Enter Password" 
                           type="password"
                           name="password"
