@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, FormBtn } from "../components/Form";
 
 function Product() {
   const [products, setProducts] = useState([]);
@@ -30,39 +30,13 @@ function Product() {
       .catch(err => console.log(err));
   }
 
-  // useEffect(() => {
-  //   API.findRecipeProduct().then((pull) => {
-  //     setFoods(pull.data.products)
-  //     setProduct(pull.data.products)
-  //     console.log(pull.data.products)
-
-  //   })
-  // }, [setProduct]);
-
   // Handles updating component state when the user types into the input field
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setProductsObject({...productsObject, [name]: value})
   };
 
-  // When the form is submitted, use the API.saveFood method to save the food data
-  // Then reload foods from the database
   
-  // const handleFormSubmit = (event) => {
-  //   event.preventDefault();
-  //   if(productsObject.title) {
-  //     API.spoonPull (productsObject.title.trim()).then(pullProduct => {
-  //       API.saveProduct ({
-  //       title: productsObject.title,
-  //       image: productsObject.image
-  //     })
-  //       .then(res => loadProducts())
-  //       .catch(err => console.log(err));
-  //     })
-      
-  //   }
-  // };
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     if(productsObject.title) {
@@ -84,7 +58,7 @@ function Product() {
 
   return (
    
-      <Container fluid >
+      <div className="container" >
         <Row>
           <Col size="s12 m5">
             <Jumbotron>
@@ -97,11 +71,6 @@ function Product() {
                 name="title"
                 placeholder="Grocery Product Name (required)"
               />
-              {/* <Input
-                onChange={handleInputChange}
-                name="image"
-                placeholder="Product Photo (optional)"
-              /> */}
               <FormBtn
                 disabled={!(productsObject.title)}
                 onClick={handleFormSubmit}
@@ -137,7 +106,7 @@ function Product() {
               
           </Col>
         </Row>
-      </Container>
+      </div>
 
   );
 };

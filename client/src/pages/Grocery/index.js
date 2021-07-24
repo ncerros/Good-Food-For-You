@@ -54,31 +54,33 @@ function Grocery () {
 
     return (
         <>
-            <h1>Grocery List</h1>
-             <form>
-                <div className="input-field col s6" >
-                    <input onChange={handleInputChange} name="name" placeholder="Enter Grocery Item" id="first_name" type="text" className="validate" />
-                    <label htmlFor="name"></label>
-                    <button onClick={handleFormSubmit}>Grocery Search</button>
-                </div>  
-                
-            </form>
-            { groceryList.length > 0 ?
-                groceryList.map(foodLists => (
-                 <Info
-                    key={foodLists.id}
-                    name={foodLists.name}
-                    image={foodLists.image}
-                    handleSave = {() => handleSave({
-                        name: foodLists.name,
-                        image: foodLists.image
-                    })}
+            <div className="container">
+                <h1>Grocery List</h1>
+                <form>
+                    <div className="input-field col s6" >
+                        <input onChange={handleInputChange} name="name" placeholder="Enter Grocery Item" id="first_name" type="text" className="validate" />
+                        <label htmlFor="name"></label>
+                        <button onClick={handleFormSubmit}>Grocery Search</button>
+                    </div>  
                     
-                />
+                </form>
+                { groceryList.length > 0 ?
+                    groceryList.map(foodLists => (
+                    <Info
+                        key={foodLists.id}
+                        name={foodLists.name}
+                        image={foodLists.image}
+                        handleSave = {() => handleSave({
+                            name: foodLists.name,
+                            image: foodLists.image
+                        })}
+                        
+                    />
 
-                ))
-                :"No search found"
-            }
+                    ))
+                    :"No search found"
+                }
+            </div>
         </>
     )
 };

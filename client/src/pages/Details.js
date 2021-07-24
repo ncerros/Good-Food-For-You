@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+import { Col } from "../components/Grid";
 //import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
@@ -17,9 +17,9 @@ function Details(props) {
   })
 
   return (
-      <Container fluid>
-        <Row>
-          <Col size="s8">
+      <div className="container">
+        <div className="row">
+          <div className="col s8">
             <div>
               <h4>{product.title}</h4> 
               <img src={product.image} alt={product.title} /> 
@@ -28,24 +28,15 @@ function Details(props) {
               <p><strong>Ingredient List: </strong>{product.ingredientList}</p> 
             </div> 
             <p></p>
-          </Col>
-        </Row>
-        {/*<Row>
-          <Col size="s10 offset-s1">
-             <article>
-              <h1>Details</h1>
-              <p>
-                {foods.details}
-              </p>
-            </article> 
-          </Col>
-        </Row>*/}
-        <Row>
-          <Col size="s2">
-            <Link to="/product">← Back to Grocery List</Link>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+        
+        <div className="row">
+          <div className="col s2">
+            <Link to="/product">← Click For Product Search</Link>
+          </div>
+        </div>
+      </div>
     );
   }
 
