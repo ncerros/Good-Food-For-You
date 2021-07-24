@@ -6,7 +6,7 @@ const Home = (props) => {
   const [user, setUser] = useState(null);
 
   const getUser = async () => {
-    const res = await axios.get("/api/auth", {
+    const res = await axios.get("/api/user", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
