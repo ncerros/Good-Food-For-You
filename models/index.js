@@ -1,5 +1,6 @@
 module.exports = {
   User: require("./user"),
   Product: require("./product"),
-  Grocery: require("./grocery")
+  Grocery: require("./grocery"),
+  MealPlan: require("./mealPlan"),
 };

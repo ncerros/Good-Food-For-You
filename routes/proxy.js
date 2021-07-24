@@ -10,6 +10,9 @@ router
   .route("/productData/:productData")
   .get(proxyController.getIngredient);
   //This is the route for the products
+router
+  .route("/:query")
+  .get(proxyController.generateMealPlan);
 
 // router
 //   .route("/groceryData/:groceryData")

@@ -8,6 +8,13 @@ module.exports = {
     const response = await axios.get(`https://api.spoonacular.com/mealplanner/generate?timeFrame=day&apiKey=${process.env.API_KEY}`);
     return res.json(response);
   },
+  generateMealPlan: async (req, res) => {
+    //add API_KEY variable to your .env file
+    // console.log(req.params.query)
+    const response = await axios.get(`https://api.spoonacular.com/mealplanner/generate?${req.params.query}&apiKey=${process.env.API_KEY}`);
+    // console.log(response)
+    return res.json(response.data);
+  },
 
   
 

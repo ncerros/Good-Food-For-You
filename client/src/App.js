@@ -13,6 +13,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Grocery from "./pages/Grocery";
 import SavedGrocery from "./pages/SavedGrocery";
+import MealPlan from "./pages/MealPlan"
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Product /> 
           </Route>*/}
           <Route exact path="/" component={Home}/>
+          <Route exact path="/generate" component={MealPlan}/>
           <Route exact path="/slider">
             <Slider />
           </Route>
