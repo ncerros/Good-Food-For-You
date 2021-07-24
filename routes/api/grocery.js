@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const groceryController = require("../../controllers/groceryController");
 
-// Matches with "/api/grocery"
+// Routes to grocery references
 
 router
   .route("/:groceryData")
@@ -9,16 +9,21 @@ router
    
 router
   .route("/")
-
+  .get(groceryController.findAll)
   .post(groceryController.create);
 
-// // Matches with "/api/grocery/:id"
+router
+  .route("/:id")
+  .delete(groceryController.remove);
+
+
+
+// // routes on standby"
 // router
 //   .route("/:id")
 //   .get(groceryController.findById)
 //   .put(groceryController.update)
 //   .delete(groceryController.remove);
-
 // API Route to Spoonacular
   
 

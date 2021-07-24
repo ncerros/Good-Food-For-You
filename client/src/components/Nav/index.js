@@ -6,6 +6,7 @@ function Nav () {
   useEffect(() => {
     API.getCurrentUser().then(results => {
       console.log(results.data)
+  
     })
   },)
 
@@ -31,7 +32,8 @@ function Nav () {
               : 
                 <>
                   <li><a href="/" className="waves-effect waves-light btn #66bb6a green lighten-1">HOME</a></li>
-                  <li><a href="/grocery" className="waves-effect waves-light btn #66bb6a green lighten-1">Real Grocery List</a></li>
+                  <li><a href="/grocery" className="waves-effect waves-light btn #66bb6a green lighten-1">Make Grocery List</a></li>
+                  <li><a href="/savedgrocery" className="waves-effect waves-light btn #66bb6a green lighten-1">View Grocery List</a></li>
                   <li><a href="/product" className="waves-effect waves-light btn #66bb6a green lighten-1">PRODUCT SEARCH</a></li>
                   <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1" onClick={logout}>LOG OUT</a></li>
                 

@@ -56,6 +56,10 @@ export default {
   // api product data pull from spoonacular
   spoonGrocery: function(searchTerm) {
     return axios.get("/api/grocery/" + searchTerm);
+  },
+
+  getGroceryList: function() {
+    return axios.get("/api/grocery");
   }
 
 
