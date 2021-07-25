@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Col } from "../components/Grid";
+//import { Col } from "../components/Grid";
 //import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 

@@ -5,7 +5,7 @@ const db = require("../models")
  groceryController = {
   getGrocery: async (req, res) => {
       const groceryPull = req.params.groceryData;
-      const thaResult = await axios.get(`https://api.spoonacular.com/food/ingredients/search?apiKey=${process.env.API_KEY}&query=${groceryPull}&number=1`);
+      const thaResult = await axios.get(`https://api.spoonacular.com/food/ingredients/search?apiKey=${process.env.API_KEY}&query=${groceryPull}&number=3`);
     console.log(thaResult)
       res.json(thaResult.data.results)
     },
