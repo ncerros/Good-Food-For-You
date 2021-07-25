@@ -1,11 +1,11 @@
-# Project Three:  Good Foods & Meal Planning
+# Good Foods: Meal Planning and Nutritional Application
 
   [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 
 ***
 
   ## Description:
-  Meal plan and groceries... Update Later. 
+  An application for tracking, storing, and retrieving meal planning information, grocery lists, and nutritional health values of food/meals. Spoonacular API will be incorporated into the application. The application will have user authentication which will be saved in a database. In addition, the user will have the ability to save information into the database.  
   
 ***
   ## Table of Contents:
@@ -26,21 +26,27 @@
 
 ***
   ## Installation:
-  To use this application, the user can fork or clone.  Then run `npm install`. See the technologies section for the application dependencies.  In addition, the user will need to connect to an active database server for full functionality.  However, any users may freely use this deployed application at the above deploy application website.
+  To use this application, the user can fork or clone it from Github, or use it from the above website link..  If cloning or forking, follow these additional instructions.  Run `npm install`. See the technologies section for the application dependencies.  In addition, the user will need to connect to an active database server for full functionality.  However, any users may freely use this deployed application at the above deploy application website.
 
 ***
   ## Screenshots:
   ### (Deployed Application)
-  ![Deployed Application]()
+  ![Deployed Application](./client/public/assets/good_foods_home_screen.jpeg)
 
   ### (User Login)
-  ![User Login]()
+  ![User Login](./client/public/assets/gf_user_logged_in.jpeg)
 
-  ### (Meal Plan Search)
-  ![Meal Plan Search]()
+  ### (Meal Plan Search/View)
+  ![Meal Plan Search](./client/public/assets/gf_meal_plan_screen.jpeg)
 
   ### (Grocery List)
-  ![Grocery List]()
+  ![Grocery List](./client/public/assets/gf_grocery_list.JPG)
+
+  ### (Product Search)
+  ![Product Search](./client/public/assets/gf_product_search.jpeg)
+
+  ### (Product Search Results)
+  ![Product Search Results](./client/public/assets/gf_product_search_results.jpeg)
 
 ***
   ## Technologies
@@ -53,9 +59,10 @@
   - Cors
   - Bcryptjs
   - Materialize
+  - jsonWebToken
 
   ## Usage:
-  This application utilizes several web and database technologies... Update Later...  
+  This application utilizes several web and database technologies to allow a user to create and track meal plans, search food products, and make a grocery list.
    
 ***
   ## License:
@@ -81,7 +88,7 @@
 
 ***
   ## Tests:
-  There are some test for this application.  The data/communication routes must be verified before this application can be properly deployed.  In addition, there must be an operational database  and it must be connected to the application to receive the full functionality.  
+  There was entensive testing of routes with Insomnia.  The data/communication routes must be verified before this application can be properly deployed.  In addition, there must be an operational database  and it must be connected to the application to receive the full functionality.  
 
 ***
   ## Questions:
