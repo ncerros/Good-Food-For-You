@@ -16,8 +16,8 @@ const Info = (props) => {
                         <div>
                         </div>
                     </div>
-                    <img src={"https://spoonacular.com/cdn/ingredients_100x100/" + props.image} alt="grocery items" />
-                    <div className="card-action">
+                    <div className="card-action container row col s10">
+                        <img src={"https://spoonacular.com/cdn/ingredients_100x100/" + props.image} alt="grocery items" />
                         <a className="waves-effect waves-light btn #2e7d32 green darken-3" style={{ margin: 5, marginLeft: 400 }} onClick={props.handleSave} >Save Item</a>
                     </div>
                 </div>

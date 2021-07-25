@@ -90,7 +90,7 @@ function MealPlanDisplay({ data }) {
           style={activeTab === 1 ? {} : { display: "none" }}
         >
           <p>
-            <a href={data.meals[0].sourceUrl} target="_blank">{data.meals[0].title} (External Site)</a>
+            <a href={data.meals[0].sourceUrl} target="_blank" rel="noopener noreferrer">{data.meals[0].title} (External Site)</a>
           </p>
           <p>
             Time to prepare: {data.meals[0].readyInMinutes} minutes.
@@ -104,7 +104,7 @@ function MealPlanDisplay({ data }) {
           style={activeTab === 2 ? {} : { display: "none" }}
         >
           <p>
-            <a href={data.meals[1].sourceUrl} target="_blank">{data.meals[1].title} (External Site)</a>
+            <a href={data.meals[1].sourceUrl} target="_blank" rel="noopener noreferrer">{data.meals[1].title} (External Site)</a>
           </p>
           <p>
             Time to prepare: {data.meals[1].readyInMinutes} minutes.
@@ -118,7 +118,7 @@ function MealPlanDisplay({ data }) {
           style={activeTab === 3 ? {} : { display: "none" }}
         >
           <p>
-            <a href={data.meals[2].sourceUrl} target="_blank">{data.meals[2].title} (External Site)</a>
+            <a href={data.meals[2].sourceUrl} target="_blank" rel="noopener noreferrer">{data.meals[2].title} (External Site)</a>
           </p>
           <p>
             Time to prepare: {data.meals[2].readyInMinutes} minutes.

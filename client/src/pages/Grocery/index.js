@@ -56,10 +56,10 @@ function Grocery () {
             <div className="container">
                 <h1>Grocery List</h1>
                 <form>
-                    <div className="input-field col s6" >
+                    <div className="input-field col s4" >
                         <input onChange={handleInputChange} name="name" placeholder="Enter Grocery Item" id="first_name" type="text" className="validate" />
                         <label htmlFor="name"></label>
-                        <button onClick={handleFormSubmit}>Grocery Search</button>
+                        <button className="btn btn-primary #a5d6a7 green lighten-1" onClick={handleFormSubmit}>Grocery Search</button>
                     </div>  
                     
                 </form>

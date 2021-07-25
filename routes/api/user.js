@@ -4,7 +4,7 @@ const User = require("../../models/user");
 const jsonWT = require("jsonwebtoken");
 const { authLogin } = require("../../middleware/auth");
 require('dotenv').config();
-//const verify = require("../../verifyToken");
+// const verify = require("../../verifyToken");
 
 // register user 4th
 router
