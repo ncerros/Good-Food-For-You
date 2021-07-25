@@ -21,7 +21,8 @@ function Nav () {
         <nav className="#1b5e20 green darken-4">
           <div className="nav-wrapper #1b5e20 green darken-4 container">
             <a href="/" className="brand-logo left">Good Foods</a>
-            <ul id="nav-mobile" className="right">
+            <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
               {!localStorage.getItem("token") ? 
                 <>
 
@@ -39,11 +40,12 @@ function Nav () {
                 
                 </>
               }
-              
-             
+                         
             </ul>
           </div>
+            
         </nav>
+        
       </div>
     )
 }

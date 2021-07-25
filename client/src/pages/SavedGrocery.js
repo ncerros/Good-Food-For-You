@@ -38,7 +38,7 @@ const SavedGrocery = () => {
                 </div>
             </div>
             <div>
-                <div size="md-12">
+                <div className="container">
                     {grocery.length ? (
                         <div heading="Saved Grocery List">
                             {grocery.map(daGrocery => (
