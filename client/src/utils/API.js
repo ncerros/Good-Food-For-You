@@ -60,8 +60,19 @@ export default {
 
   getGroceryList: function() {
     return axios.get("/api/grocery");
-  }
+  },
+  getMealPlans: function() {
+    return axios.get("/api/mealPlan/");
+  },
 
+  saveMealPlan: function(plan) {
+    // console.log(plan)
+    return axios.post("/api/mealPlan/", plan);
+  },
+
+  generateMealPlan: function(query) {
+    return axios.get("/proxy/" + query);
+  },
 
 
 };
