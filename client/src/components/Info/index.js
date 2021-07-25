@@ -3,7 +3,7 @@ import React from "react";
 const Info = (props) => {
     return (
         <div className="row basic-card container">
-            <div className="col s12 m6">
+            <div className="col s12 m12">
                 <div className="#a5d6a7 green lighten-3">
                     <div className="card-content white-text" style={{ display: "flex", margin: 1 }}>
                         <span className="card-title" style={{
