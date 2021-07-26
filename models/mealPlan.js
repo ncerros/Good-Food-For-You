@@ -10,6 +10,10 @@ const nutrientSchema = new Schema({
 const mealPlanSchema = new Schema({
   meals: { type: Array, required: true},
   nutrients: nutrientSchema,
+  user_id: { 
+    type: Schema.Types.ObjectId,
+    ref: "users"
+  }
 });
 
 const MealPlan = mongoose.model("MealPlan", mealPlanSchema);

@@ -64,7 +64,7 @@ function MealPlan() {
                     id="days"
                   >
                     <option value="day">One Day</option>
-                    <option value="week">Full Week</option>
+                    {/* <option value="week">Full Week</option> */}
                   </select>
                   <label className="active" style={{color: "black"}}>Number Of Days To Generate Meal Plan For</label>
                 </div>
