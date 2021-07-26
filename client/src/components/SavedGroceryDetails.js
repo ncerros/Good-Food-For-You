@@ -3,7 +3,7 @@ import React from "react";
 
 
 const SavedGroceryDetails = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div className="container">
       <div className="right-align row col s12">

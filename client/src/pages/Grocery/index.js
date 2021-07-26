@@ -39,7 +39,7 @@ function Grocery () {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log(groceryObject)
+        // console.log(groceryObject)
         if (groceryObject.name) {
             API.spoonGrocery(groceryObject.name.trim()).then(pullGrocery => {  setGroceryList(pullGrocery.data) })
         }
@@ -47,7 +47,7 @@ function Grocery () {
 
     const handleSave = (item) => {
         API.saveGrocery(item).then(data => {
-            console.log(data);
+            // console.log(data);
         });
 
     }
