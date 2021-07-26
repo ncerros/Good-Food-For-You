@@ -2,31 +2,32 @@ const axios = require("axios");
 require('dotenv').config();
 const db = require("../models")
 
- groceryController = {
+groceryController = {
   getGrocery: async (req, res) => {
-      const groceryPull = req.params.groceryData;
-      const thaResult = await axios.get(`https://api.spoonacular.com/food/ingredients/search?apiKey=${process.env.API_KEY}&query=${groceryPull}&number=3`);
-    console.log(thaResult)
-      res.json(thaResult.data.results)
-    },
+    const groceryPull = req.params.groceryData;
+    const thaResult = await axios.get(`https://api.spoonacular.com/food/ingredients/search?apiKey=${process.env.API_KEY}&query=${groceryPull}&number=3`);
+    // console.log(thaResult)
+    res.json(thaResult.data.results)
+  },
 
-      create: function(req, res) {
-        req.body.user_id = req.session.user._id
+  create: function (req, res) {
+    req.body.user_id = req.session.user._id
     db.Grocery
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
 
-  findAll: function(req, res) {
-      req.query.user_id = req.session.user._id
-   db.Grocery
+  findAll: function (req, res) {
+    // console.log(req.session.user)
+    req.query.user_id = req.session.user._id
+    db.Grocery
       .find(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-   },
+  },
 
-   remove: function(req, res) {
+  remove: function (req, res) {
     db.Grocery
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
@@ -36,7 +37,7 @@ const db = require("../models")
 
 
 };
- 
+
 module.exports = groceryController;
 
 

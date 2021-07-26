@@ -2,8 +2,9 @@ const MealPlan = require("../models/mealPlan")
 
 module.exports = {
   getAll: function(req, res) {
+    // console.log(req.session.user)
     req.query.user_id = req.session.user._id
-    // console.log('here')
+    
     MealPlan
       .find(req.query)
       .then(dbModel => {

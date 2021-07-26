@@ -9,7 +9,8 @@ require('dotenv').config();
 // register user 4th
 router
   .post("/register", async (req, res) => {
-    const { fname, lname, email, zipcode, password } = req.body
+    const { fname, lname, email, zipcode, password } = req.body;
+    // console.log(req.body)
     try {
       let user = await User.findOne({ email })
       if (user) {
@@ -24,9 +25,10 @@ router
         password: hashPwd,
       })
       await user.save();
+      
       return res.status(201).json({ message: `Your account has been successfully created.` });
     } catch (error) {
-      console.log(error)
+      // console.log(error)
       return res.status(400).json({ error: error.message });
     }
 
@@ -52,7 +54,10 @@ router
         expiresIn: "1800000",
       });
       req.session.user = user
-
+      // await req.session.save(() => {
+      //   req.session.user._id = user.id;
+      //   req.session.logged_in = true;
+      // });
       return res.json({
         token,
         user: {
@@ -72,11 +77,16 @@ router
 // *** Make a protected route must be logged in to access route 8th *** /
 router
   .get("/", authLogin, async (req, res) => {
-    console.log(req.user);
+    // console.log(req.user);
     try {
       const user = await User.findById(req.user._id).select("-password -__v");
-      console.log("Status of current logged on user: ", user)
-      res.json(user);
+      // console.log("Status of current logged on user: ", user)
+      const userData = {
+        user,
+        token: req.user
+      }
+      // console.log(userData)
+      res.json(userData);
     } catch (error) {
       console.log(error)
       return res.status(400).json({ error: error.message });
