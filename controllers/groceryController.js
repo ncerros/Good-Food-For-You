@@ -11,6 +11,7 @@ const db = require("../models")
     },
 
       create: function(req, res) {
+        req.body.user_id = req.session.user._id
     db.Grocery
       .create(req.body)
       .then(dbModel => res.json(dbModel))
@@ -18,8 +19,9 @@ const db = require("../models")
   },
 
   findAll: function(req, res) {
+      req.query.user_id = req.session.user._id
    db.Grocery
-      .find({})
+      .find(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
    },

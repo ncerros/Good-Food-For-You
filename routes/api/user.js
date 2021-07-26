@@ -51,6 +51,8 @@ router
       const token = jsonWT.sign({ _id: user._id }, process.env.SECRET, {
         expiresIn: "1800000",
       });
+      req.session.user = user
+
       return res.json({
         token,
         user: {
