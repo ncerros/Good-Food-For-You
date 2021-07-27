@@ -31,9 +31,7 @@ export default {
   getCurrentUser: function() {
     return axios.get("/api/user")
   },
-  // saveUser: function() {
-  //   return
-  // },
+  // user status 
 
 
   // api grocery data pull from spoonacular

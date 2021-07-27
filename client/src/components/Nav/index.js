@@ -1,67 +1,80 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import API from "../../utils/API";
 import M from "materialize-css";
-import { Redirect } from 'react-router';
 
-function Nav({ isToken }) {
+function Nav () {
 
-  const [shouldRedirect, setShouldRedirect] = useState(false);
-  useEffect(() => {
+  document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
-    var instance = M.Sidenav.init(elems, {
-      edge: 'right',
-    });
+    var instances = M.Sidenav.init(elems);
+  });
 
-    // instance.addEventListener('click', () => {
-    //   instance.open()
-    // })
-
-    // API.getCurrentUser().then(results => {
-    //   console.log(results.data)
-
-    // })
-  })
   
+  useEffect(() => {
+    API.getCurrentUser().then(results => {
+      console.log(results.data)
+  
+    })
+  },)
+
   const logout = (props) => {
     localStorage.removeItem("token");
-    // props.history.push("/");
-    setShouldRedirect(true);
-
+    props.history.push("/");
+    
   };
 
-  return (
-    <div>
-      <nav className="#1b5e20 green darken-4" role="navigation" style={{ height: '64px', lineHeight: '64px' }}>
-        <a href="/" className="" style={{ position: 'absolute', left: '12px', fontSize: '28px' }}>Good Foods</a>
-        <div className="nav-wrapper" style={{ position: 'absolute', right: '18px' }}>
-          {!isToken
-            ?
-            <ul className="right sidenav" id="slide-out">
+    return (
+      <div className="#a5d6a7 green lighten-3">
+        <nav className="#1b5e20 green darken-4">
+          <div className="nav-wrapper #1b5e20 green darken-4 container">
+            <a href="/" className="brand-logo right">Good Foods</a>
+            <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+            <ul id="nav-mobile" className="left hide-on-med-and-down container">
+              {!localStorage.getItem("token") ? 
+                <>
+
+                  <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1">LOGIN</a></li>
+                  <li><a href="/register" className="waves-effect waves-light btn #66bb6a green lighten-1">REGISTER</a></li>
+                  <li><a href="/about" className="waves-effect waves-light btn #66bb6a green lighten-1">ABOUT US</a></li>
+                </> 
+              : 
+                <>
+                  <li><a href="/generate" className="waves-effect waves-light btn #66bb6a green lighten-1">Meal Plan</a></li>
+                  <li><a href="/grocery" className="waves-effect waves-light btn #66bb6a green lighten-1">Make Grocery List</a></li>
+                  <li><a href="/savedgrocery" className="waves-effect waves-light btn #66bb6a green lighten-1">View Grocery List</a></li>
+                  <li><a href="/product" className="waves-effect waves-light btn #66bb6a green lighten-1">PRODUCT SEARCH</a></li>
+                  <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1" onClick={logout}>LOG OUT</a></li>
+                
+                </>
+              }
+                         
+            </ul>
+            {!localStorage.getItem("token") ? 
+            <>
+            <ul class="sidenav" id="mobile-demo">
               <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1">LOGIN</a></li>
               <li><a href="/register" className="waves-effect waves-light btn #66bb6a green lighten-1">REGISTER</a></li>
               <li><a href="/about" className="waves-effect waves-light btn #66bb6a green lighten-1">ABOUT US</a></li>
             </ul>
+            </>
             :
-            <ul className="right sidenav" id="slide-out">
-              <li><a href="/mealplan" className="waves-effect waves-light btn #66bb6a green lighten-1">Meal Plan</a></li>
+            <>
+            <ul class="sidenav" id="mobile-demo">
+              <li><a href="/generate" className="waves-effect waves-light btn #66bb6a green lighten-1">Meal Plan</a></li>
               <li><a href="/grocery" className="waves-effect waves-light btn #66bb6a green lighten-1">Make Grocery List</a></li>
               <li><a href="/savedgrocery" className="waves-effect waves-light btn #66bb6a green lighten-1">View Grocery List</a></li>
               <li><a href="/product" className="waves-effect waves-light btn #66bb6a green lighten-1">PRODUCT SEARCH</a></li>
               <li><a href="/login" className="waves-effect waves-light btn #66bb6a green lighten-1" onClick={logout}>LOG OUT</a></li>
             </ul>
-          }
-          <a href="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></a>
-          {shouldRedirect
-            ? <Redirect to="/"/>
-            : null}
-        </div>
-      </nav>
-    </div>
-
-
-  )
+            </>
+            }
+          </div>
+            
+        </nav>
+        
+      </div>
+    )
 }
-
 
 
 export default Nav;
