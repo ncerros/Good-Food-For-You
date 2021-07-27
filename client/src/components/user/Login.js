@@ -34,8 +34,8 @@ const Login = ({ setToken, setUserName }) => {
       localStorage.setItem("token", res.data.token);
       setToken(res.data.token);
       setUserName(res.data.user.fname)
-      // props.history.push("/");
-      setSuccess(true);
+      window.location.href="/"
+      // setSuccess(true);
     })
     .catch(err => {
       // console.log(err)

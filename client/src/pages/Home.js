@@ -8,19 +8,19 @@ const Home = ({ userName }) => {
  
   
   // useEffect(() => {
-  //   getUser();
+  //   // if (localStorage.getItem("token")) {
+  //   //   // props.history.push("/home");
+  //   //   window.location.href="/login";
+     
+  //   // }
   // }, []);
 
-  // const logout = () => {
-  //   localStorage.removeItem("token");
-  //   props.history.push("/login");
-  // };
+  // // const logout = () => {
+  // //   localStorage.removeItem("token");
+  // //   props.history.push("/login");
+  // // };
 
-  // if (!localStorage.getItem("token")) {
-  //   // props.history.push("/home");
-  //   window.location.href="/login";
-   
-  // }
+  
   
   return (
     <div className="#a5d6a7 green lighten-3">
